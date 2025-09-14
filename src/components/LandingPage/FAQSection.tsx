@@ -2,62 +2,62 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    question: "Can I edit the booklet with my own name/logo?",
-    answer: "Absolutely! The entire booklet is fully editable. You can customize it with your own name, logo, branding, colors, and any additional content you want to include. All files come in editable formats that work with common software like Canva, PowerPoint, and Adobe programs."
+    question: "Posso editar a apostila com meu próprio nome/logo?",
+    answer: "Claro que sim! A apostila inteira é totalmente editável. Você pode personalizá-la com seu próprio nome, logo, marca, cores e qualquer conteúdo adicional que queira incluir. Todos os arquivos vêm em formatos editáveis que funcionam com softwares comuns como Canva, PowerPoint e programas Adobe."
   },
   {
-    question: "Do I receive it digitally or printed?", 
-    answer: "You receive digital files that you can use both digitally and for printing. The package includes high-resolution files optimized for both digital use (classes, presentations) and professional printing. You'll get both interactive digital versions and print-ready PDFs."
+    question: "Recebo digital ou impresso?", 
+    answer: "Você recebe arquivos digitais que pode usar tanto digitalmente quanto para impressão. O pacote inclui arquivos em alta resolução otimizados para uso digital (aulas, apresentações) e impressão profissional. Você receberá versões digitais interativas e PDFs prontos para impressão."
   },
   {
-    question: "How quickly do I get access?",
-    answer: "You get instant access! Immediately after your purchase is confirmed, you'll receive an email with download links to all your materials. No waiting, no shipping delays - you can start customizing and using your booklet within minutes."
+    question: "Quão rápido tenho acesso?",
+    answer: "Você tem acesso instantâneo! Imediatamente após a confirmação da compra, receberá um email com links para download de todos os materiais. Sem espera, sem demoras de envio - você pode começar a personalizar e usar sua apostila em minutos."
   },
   {
-    question: "What software do I need to edit the files?",
-    answer: "The files are designed to work with popular, user-friendly software. You can edit them using Canva (free), PowerPoint, Google Slides, or professional software like Adobe Illustrator/InDesign. We also include a quick start guide showing you exactly how to customize each type of file."
+    question: "Que software preciso para editar os arquivos?",
+    answer: "Os arquivos são projetados para funcionar com softwares populares e fáceis de usar. Você pode editá-los usando Canva (gratuito), PowerPoint, Google Slides ou softwares profissionais como Adobe Illustrator/InDesign. Também incluímos um guia de início rápido mostrando exatamente como personalizar cada tipo de arquivo."
   },
   {
-    question: "Is there a money-back guarantee?",
-    answer: "Yes! We offer a 7-day money-back guarantee. If you're not completely satisfied with your purchase for any reason, simply contact us within 7 days and we'll refund your payment, no questions asked."
+    question: "Há garantia de devolução do dinheiro?",
+    answer: "Sim! Oferecemos garantia de 7 dias de devolução do dinheiro. Se não estiver completamente satisfeita com sua compra por qualquer motivo, simplesmente entre em contato conosco em até 7 dias e reembolsaremos seu pagamento, sem perguntas."
   },
   {
-    question: "Can I use this for multiple courses?",
-    answer: "Absolutely! Once you purchase the booklet, you own it and can use it for as many courses as you want. You can create different versions for different types of makeup courses, customize for different audiences, and use it as many times as you need."
+    question: "Posso usar isso para múltiplos cursos?",
+    answer: "Absolutamente! Uma vez que comprar a apostila, ela é sua e pode usá-la para quantos cursos quiser. Pode criar diferentes versões para diferentes tipos de cursos de maquiagem, personalizar para diferentes públicos e usar quantas vezes precisar."
   }
 ];
 
 export const FAQSection = () => {
   return (
-    <section className="py-20 bg-gradient-hero">
-      <div className="container mx-auto px-6">
+    <section className="py-12 lg:py-20 bg-gradient-hero">
+      <div className="container mx-auto px-4 lg:px-6">
         <div className="max-w-3xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="font-display text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Frequently Asked{' '}
+          <div className="text-center mb-8 lg:mb-12 animate-fade-in">
+            <h2 className="font-display text-3xl lg:text-5xl font-bold text-foreground mb-3 lg:mb-4">
+              Perguntas{' '}
               <span className="bg-gradient-cta bg-clip-text text-transparent">
-                Questions
+                Frequentes
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground font-body">
-              Everything you need to know about your makeup course booklet
+            <p className="text-lg lg:text-xl text-muted-foreground font-body">
+              Tudo que você precisa saber sobre sua apostila de curso de maquiagem
             </p>
           </div>
 
           {/* FAQ Accordion */}
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-3 lg:space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-card/50 backdrop-blur-sm rounded-xl border border-accent/20 px-6 hover:border-accent/40 transition-colors"
+                  className="bg-card/50 backdrop-blur-sm rounded-xl border border-accent/20 px-4 lg:px-6 hover:border-accent/40 transition-colors"
                 >
-                  <AccordionTrigger className="text-left font-body font-semibold text-foreground hover:text-primary py-6 hover:no-underline">
+                  <AccordionTrigger className="text-left font-body font-semibold text-foreground hover:text-primary py-4 lg:py-6 hover:no-underline text-sm lg:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground font-body leading-relaxed pb-6">
+                  <AccordionContent className="text-muted-foreground font-body leading-relaxed pb-4 lg:pb-6 text-sm lg:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -66,21 +66,21 @@ export const FAQSection = () => {
           </div>
 
           {/* Additional help */}
-          <div className="text-center mt-12 p-8 bg-card/30 backdrop-blur-sm rounded-xl border border-accent/20">
-            <h3 className="font-body text-xl font-semibold text-foreground mb-2">
-              Still have questions?
+          <div className="text-center mt-8 lg:mt-12 p-6 lg:p-8 bg-card/30 backdrop-blur-sm rounded-xl border border-accent/20">
+            <h3 className="font-body text-lg lg:text-xl font-semibold text-foreground mb-2">
+              Ainda tem dúvidas?
             </h3>
-            <p className="text-muted-foreground mb-4">
-              We're here to help! Contact us and we'll get back to you within 24 hours.
+            <p className="text-muted-foreground mb-4 text-sm lg:text-base">
+              Estamos aqui para ajudar! Entre em contato e responderemos em até 24 horas.
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-primary">📧</span>
-                <span className="text-muted-foreground">support@makeupacademy.com</span>
+                <span className="text-muted-foreground">suporte@academiamaquiagem.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-primary">💬</span>
-                <span className="text-muted-foreground">Live Chat Available</span>
+                <span className="text-muted-foreground">Chat Online Disponível</span>
               </div>
             </div>
           </div>

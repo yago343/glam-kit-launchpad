@@ -3,29 +3,29 @@ import { Card } from "@/components/ui/card";
 const testimonials = [
   {
     name: "Maria Santos",
-    role: "Professional Makeup Artist",
-    content: "This booklet transformed my teaching! My students love the professional materials, and I've been able to charge 40% more for my courses. The quality is outstanding!",
+    role: "Maquiadora Profissional",
+    content: "Esta apostila transformou meu ensino! Minhas alunas adoram os materiais profissionais, e consegui aumentar o valor dos meus cursos em 40%. A qualidade é excepcional!",
     rating: 5,
     image: "👩🏻‍💼"
   },
   {
     name: "Ana Rodriguez",
-    role: "Beauty Academy Owner",
-    content: "Finally, materials that match the quality of my expertise! The certificates and proposals helped me establish credibility with corporate clients. Highly recommend!",
+    role: "Proprietária de Academia de Beleza",
+    content: "Finalmente, materiais que combinam com a qualidade da minha expertise! Os certificados e propostas me ajudaram a estabelecer credibilidade com clientes corporativos. Super recomendo!",
     rating: 5,
     image: "👩🏽‍🎨"
   },
   {
     name: "Jessica Chen",
-    role: "Freelance Makeup Artist",
-    content: "I was spending hours creating course materials. This booklet saved me so much time and looks incredibly professional. My students are always impressed!",
+    role: "Maquiadora Freelancer",
+    content: "Eu passava horas criando materiais para cursos. Esta apostila me poupou muito tempo e tem aparência incrivelmente profissional. Minhas alunas ficam sempre impressionadas!",
     rating: 5,
     image: "👩🏻‍💻"
   },
   {
     name: "Sofia Oliveira",
-    role: "Makeup Instructor",
-    content: "The best investment for my teaching career! The editable templates make it so easy to customize for different courses. Professional results every time.",
+    role: "Instrutora de Maquiagem",
+    content: "O melhor investimento da minha carreira de ensino! Os modelos editáveis facilitam muito a personalização para diferentes cursos. Resultados profissionais sempre.",
     rating: 5,
     image: "👩🏽‍🏫"
   }
@@ -33,25 +33,25 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="py-12 lg:py-20 bg-background">
+      <div className="container mx-auto px-4 lg:px-6">
         {/* Section header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-display text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Already transforming classes for{' '}
+        <div className="text-center mb-12 lg:mb-16 animate-fade-in">
+          <h2 className="font-display text-3xl lg:text-5xl font-bold text-foreground mb-4 lg:mb-6">
+            Já transformando aulas de{' '}
             <span className="bg-gradient-cta bg-clip-text text-transparent">
-              hundreds of makeup artists
+              centenas de maquiadoras
             </span>
           </h2>
           <div className="h-1 w-32 bg-gradient-accent mx-auto rounded-full"></div>
         </div>
 
         {/* Testimonials grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="p-8 bg-gradient-hero border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-xl group animate-fade-in relative overflow-hidden"
+              className="p-6 lg:p-8 bg-gradient-hero border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-xl group animate-fade-in relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Decorative gradient overlay */}
@@ -66,7 +66,7 @@ export const TestimonialsSection = () => {
                 </div>
 
                 {/* Testimonial content */}
-                <p className="text-muted-foreground leading-relaxed mb-6 italic font-body">
+                <p className="text-muted-foreground leading-relaxed mb-6 italic font-body text-sm lg:text-base">
                   "{testimonial.content}"
                 </p>
 
@@ -76,10 +76,10 @@ export const TestimonialsSection = () => {
                     {testimonial.image}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                    <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm lg:text-base">
                       {testimonial.name}
                     </h4>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-xs lg:text-sm text-muted-foreground">
                       {testimonial.role}
                     </p>
                   </div>
@@ -90,22 +90,22 @@ export const TestimonialsSection = () => {
         </div>
 
         {/* Bottom stats */}
-        <div className="flex flex-wrap justify-center gap-12 mt-16 pt-16 border-t border-border">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 mt-12 lg:mt-16 pt-12 lg:pt-16 border-t border-border">
           <div className="text-center animate-fade-in">
-            <div className="text-3xl font-bold text-foreground mb-2">500+</div>
-            <div className="text-muted-foreground">Happy Students</div>
+            <div className="text-2xl lg:text-3xl font-bold text-foreground mb-2">500+</div>
+            <div className="text-muted-foreground text-sm lg:text-base">Alunas Felizes</div>
           </div>
           <div className="text-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="text-3xl font-bold text-foreground mb-2">4.9★</div>
-            <div className="text-muted-foreground">Average Rating</div>
+            <div className="text-2xl lg:text-3xl font-bold text-foreground mb-2">4.9★</div>
+            <div className="text-muted-foreground text-sm lg:text-base">Nota Média</div>
           </div>
           <div className="text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="text-3xl font-bold text-foreground mb-2">127</div>
-            <div className="text-muted-foreground">Reviews</div>
+            <div className="text-2xl lg:text-3xl font-bold text-foreground mb-2">127</div>
+            <div className="text-muted-foreground text-sm lg:text-base">Avaliações</div>
           </div>
           <div className="text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="text-3xl font-bold text-foreground mb-2">98%</div>
-            <div className="text-muted-foreground">Satisfaction</div>
+            <div className="text-2xl lg:text-3xl font-bold text-foreground mb-2">98%</div>
+            <div className="text-muted-foreground text-sm lg:text-base">Satisfação</div>
           </div>
         </div>
       </div>
